@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-login">
+    <div class="left-login">
+        <h1>Faça seu login <br> na plataforma</h1>
+        <img src="logo_animate.svg" class="left-login-img" alt="homem olhando a lua">
+    </div>
+    <div class="right-login">
+        <div class="card-login">
+            <h1>Login</h1>
+            <div class="textfield">
+                <input type="text" name="user" maxlength="20" placeholder="Usuário">
+            </div>
+            <div class="textfield">
+                <input 
+                type="password"
+                name="pass" 
+                maxlength="10"
+                placeholder="Senha"
+                id="passwordInput">
+            <span class="eye" onclick="toggle()">
+                <i id="eyeHideOn" class="fa-solid fa-eye-slash"></i>
+                <i id="eyeHideOff" class="fa-solid fa-eye"></i>
+                </span>
+            </div>
+            <a href="">Esqueci minha senha</a>
+            <input class="btn-login" type="submit" value="Login">
+            <span>Não tem uma conta? <a href="">Registre-se</a></span>
+        </div>
+    </div>
+    </div>
+    <script>
+        function toggle(){
+        let password = document.getElementById("passwordInput");
+        let eyeHideOn = document.getElementById("eyeHideOn");
+        let eyeHideOff = document.getElementById("eyeHideOff");
+        if(password.type === "password"){
+            password.type = "text"
+            eyeHideOn.style.display = "block";
+            eyeHideOff.style.display = "none";
+        }else{
+            password.type = "password"
+            eyeHideOn.style.display = "none";
+            eyeHideOff.style.display = "block";
+        }
+    }
+    </script>
+</body>
+</html>
