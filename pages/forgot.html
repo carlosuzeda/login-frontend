@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha</title>
+    <link rel="stylesheet" href="../styles/forgot.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Recuperar senha</h1>
+        <div class="input-field">
+        <input 
+        id="emailField"
+        type="text"
+        name="user"
+        placeholder="Digite seu e-mail"
+        onblur="CheckEmail()">
+    <span id="detectEmail"></span>
+    </div>
+        <input
+        type="submit"
+        value="Recuperar"
+        onclick="VerifyEmail()">
+        <a href="../index.html">Voltar</a>
+    </main>
+<script>
+    let email = document.getElementById("emailField");
+    let detectEmail = document.getElementById("detectEmail");
+    function VerifyEmail(){
+        if(email.value.length == 0){
+            detectEmail.innerHTML = "E-mail é obrigatório";
+            detectEmail.style.display = "block";
+        }else if(email.value == "" || email.value.indexOf('@')==-1 || email.value.indexOf('.')==-1){
+            detectEmail.innerHTML = "Insira um e-mail válido";
+            detectEmail.style.display = "block";
+        } else{
+            detectEmail.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

@@ -2,8 +2,8 @@
 
 * { 
     margin: 0;
-    border: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
@@ -18,6 +18,9 @@ body{
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 .main-login{
@@ -40,7 +43,7 @@ body{
 }
 
 .left-login-img{
-    width: 35vw;
+    width: 40vw;
 }
 
 .right-login{
@@ -137,12 +140,12 @@ body{
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 800;
-    letter-spacing: 3px;
     color: white;
     background: #1a7993;
-    transition: 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
 }
 .btn-login:hover{
+    letter-spacing: 3px;
     background: #28abcf;
 }
 
