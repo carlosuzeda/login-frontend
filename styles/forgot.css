@@ -29,7 +29,7 @@ main.container{
 
 
 main h1{
-    color: #fff;
+    color: #e1e1e6;
     text-align: center;
     font-size: 2rem;
     position: relative;
@@ -58,7 +58,7 @@ main.container input[type="submit"]{
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 800;
-    color: white;
+    color: #e1e1e6;
     background: #1a7993;
     transition: all 0.3s ease;
 }
@@ -76,7 +76,7 @@ main.container .input-field input{
     background: transparent;
     border-bottom: 1px solid #fff;
     font-size: 0.8rem;
-    color: #fff;
+    color: #e1e1e6;
 }
 
 #detectEmail{

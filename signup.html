@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <main class="main-signup">
+        <section class="left-signup">
+            <div class="card-signup">
+                <h1>Crie sua conta</h1>
+                <div class="text-field">
+                    <input type="email" placeholder="Seu E-mail" id="email">
+                </div>
+                <div class="text-field">
+                    <input type="text" placeholder="Seu nome" id="name">
+                </div>
+                <div class="text-field">
+                    <input type="password" placeholder="Sua senha" id="passwordInput">
+                    <span class="eye" onclick="toggle()">
+                        <i id="eyeHideOn" class="fa-solid fa-eye-slash"></i>
+                        <i id="eyeHideOff" class="fa-solid fa-eye"></i>
+                        </span>
+                </div>
+                <div class="text-field">
+                    <input type="password" placeholder="Confirme sua senha" id="passwordInputSecond">
+                    <span class="eye" onclick="toggleSecond()">
+                        <i id="eyeHideOnSecond" class="fa-solid fa-eye-slash"></i>
+                        <i id="eyeHideOffSecond" class="fa-solid fa-eye"></i>
+                        </span>
+                </div>
+                <span>Ao se registrar, você aceita nossos <a href="">termos de uso</a> e a nossa <a href="">política de privacidade</a>.</span>
+                <input type="submit" value="Cadastrar">
+                </div>
+            </section>
+            <section class="right-signup">
+                <div class="box-right">
+                    <img src="./logo_animate.svg" alt="">
+                    <div class="zone-text">
+                        <h1>Mais de 200 mil<br>boosters já estão<br>conectados.</h1>
+                    </div>
+                    <div class="zone-text">
+                        <p>Junte-se a milhares de devs e acelere na direção dos<br>seus objetos</p>
+                    </div>
+                    <a href="./index.html">Voltar para login</a>
+                </div>
+            </section>
+        </main>
+<script>
+    function toggle(){
+        let password = document.getElementById("passwordInput");
+        let eyeHideOn = document.getElementById("eyeHideOn");
+        let eyeHideOff = document.getElementById("eyeHideOff");
+    if(password.type === "password"){
+        password.type = "text"
+        eyeHideOn.style.display = "inline-block";
+        eyeHideOff.style.display = "none";
+    }else{
+        password.type = "password"
+        eyeHideOn.style.display = "none";
+        eyeHideOff.style.display = "inline-block";
+    }
+}
+    function toggleSecond(){
+        let passwordSecond = document.getElementById("passwordInputSecond");
+        let eyeHideOnSecond = document.getElementById("eyeHideOnSecond");
+        let eyeHideOffSecond = document.getElementById("eyeHideOffSecond");
+        if(passwordSecond.type === "password"){
+        passwordSecond.type = "text"
+        eyeHideOnSecond.style.display = "inline-block";
+        eyeHideOffSecond.style.display = "none";
+    }else{
+        passwordSecond.type = "password";
+        eyeHideOnSecond.style.display = "none";
+        eyeHideOffSecond.style.display = "inline-block";
+    }
+}
+</script>
+</body>
+</html>

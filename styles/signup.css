@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* { 
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,21 +9,19 @@
 }
 
 :root{
-    --hue:200;
-  }
+--hue: 200;
+}
 
 body{
     background: linear-gradient(10deg, hsla(var(--hue), 0%, 5%, 1), hsla(var(--hue), 0%, 0%, 1));
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
 a {
-    font-size: 0.8rem;
     text-decoration: none;
+    margin: auto;
     color:#1a7993;
     transition: 0.2s ease-in-out;
 }
@@ -31,40 +29,27 @@ a:hover{
     color: #28abcf;
 }
 
-.main-login{
+.main-signup{
     display: flex;
     flex-direction: row;
 }
 
-.left-login{
+.left-signup{
     width: 50vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
-.left-login h1{
-    font-size: 36px;
-    align-items: center;
+.card-signup h1{
     color: #e1e1e6;
+    font-size: 25px;
+    margin-bottom: 39px;
 }
 
-.left-login img{
-    width: 35vw;
-}
-
-.right-login{
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.card-login{
+.card-signup{
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -74,34 +59,28 @@ a:hover{
     background: hsla(var(--hue), 0%, 10%, 1);
 }
 
-.card-login h1{
-    color: #e1e1e6;
-    font-size: 25px;
-    margin-bottom: 39px;
-}
-
-.card-login span i{
-    color: #1a7993;
-}
-
-.card-login span {
+.card-signup span{
     color: #e1e1e6;
     font-weight: normal;
     font-size: 0.8rem;
 }
 
-.textfield{
+.text-field{
     margin: 10px auto;
     width: 100%;
     border-bottom: 1px solid #e1e1e6;
     padding-top: 10px;
     padding-bottom: 1px;
 }
-#user{
+
+#email{
+    width: 100%;
+}
+#name{
     width: 100%;
 }
 
-.textfield input{
+.text-field input{
     width: 90%;
     color: #e1e1e6;
     outline: none;
@@ -119,7 +98,16 @@ a:hover{
     color: #125466;
 }
 
-.btn-login{
+#eyeHideOnSecond{
+    display: none;
+    color: #125466;
+}
+
+.card-signup span i{
+    color: #1a7993;
+}
+
+.card-signup input[type="submit"]{
     margin: 25px auto 20px;
     width: 100%;
     padding: 10px 0;
@@ -133,37 +121,85 @@ a:hover{
     background: #1a7993;
     transition: all 0.2s ease-in-out;
 }
-.btn-login:hover{
+
+.card-signup input[type="submit"]:hover{
     letter-spacing: 3px;
     background: #28abcf;
 }
 
-.card-login span{
+.card-signup span{
     text-align: center;
 }
 
+.right-signup img{
+    width: 20vw;
+}
+
+.right-signup{
+    padding: 0px 0px 0px 100px;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.box-right{
+    color:#e1e1e6;
+    font-size: 0.9rem;
+}
+
+.box-right h1{
+    font-size: 36px
+}
+
+.zone-text{
+    margin-bottom: 39px;
+}
+
+
 @media only screen and (max-width: 880px){
-    .main-login{
-        flex-direction: column;
+    .main-signup{
+        margin: auto;
+        flex-direction:column-reverse;
     }
-    .left-login-img{
+    .card-signup{
+        padding: 32px 32px 10px 32px;
+        width: 80%;
+        margin: 32px;
+    }
+    .left-signup{
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    .right-signup{
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+    }    
+}
+
+@media only screen and (max-width: 600px){
+    .right-signup img{
         display: none;
     }
-    .left-login{
-        width: 100%;
-        height: auto;
+    .box-right h1{
+        font-size: 25px
     }
-    .right-login{
-        width: 100%;
-        height: auto;
+    .box-right{
+        color:#e1e1e6;
+        font-size: 0.8rem;
     }
-    .card-login input::placeholder{
-        font-size: 0.8rem;;
-    }
-    .btn-login{
+    .text-field input{t;
         font-size: 0.7rem;
     }
-    .card-login{
-        width: 70vw;
+    .card-signup span{
+        font-size: 0.7rem;
+    }
+    .card-signup h1{
+        font-size: 20px;
     }
 }

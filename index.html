@@ -18,7 +18,7 @@
         <div class="card-login">
             <h1>Login</h1>
             <div class="textfield">
-                <input type="text" name="user" placeholder="Usuário">
+                <input type="email" name="user" placeholder="Email" id="user">
             </div>
             <div class="textfield">
                 <input 
@@ -32,27 +32,27 @@
                 <i id="eyeHideOff" class="fa-solid fa-eye"></i>
                 </span>
             </div>
-            <a href="./pages/forgot.html">Esqueci minha senha</a>
+            <a href="./forgot.html">Esqueci minha senha</a>
             <input class="btn-login" type="submit" value="Login">
-            <span>Não tem uma conta? <a href="">Registre-se</a></span>
+            <span>Não tem uma conta? <a href="./signup.html">Registre-se</a></span>
         </div>
     </div>
     </div>
-    <script>
-        function toggle(){
-        let password = document.getElementById("passwordInput");
-        let eyeHideOn = document.getElementById("eyeHideOn");
-        let eyeHideOff = document.getElementById("eyeHideOff");
-        if(password.type === "password"){
-            password.type = "text"
-            eyeHideOn.style.display = "block";
-            eyeHideOff.style.display = "none";
-        }else{
-            password.type = "password"
-            eyeHideOn.style.display = "none";
-            eyeHideOff.style.display = "block";
-        }
+<script>
+    function toggle(){
+    let password = document.getElementById("passwordInput");
+    let eyeHideOn = document.getElementById("eyeHideOn");
+    let eyeHideOff = document.getElementById("eyeHideOff");
+    if(password.type === "password"){
+        password.type = "text"
+        eyeHideOn.style.display = "inline-block";
+        eyeHideOff.style.display = "none";
+    }else{
+        password.type = "password"
+        eyeHideOn.style.display = "none";
+        eyeHideOff.style.display = "inline-block";
     }
-    </script>
+}
+</script>
 </body>
 </html>
