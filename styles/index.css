@@ -10,6 +10,9 @@
 
 :root{
     --hue:200;
+    --basic-color: #e1e1e6;
+    --second-color: #1a7993;
+    --active-color: #28abcf;
   }
 
 body{
@@ -24,11 +27,11 @@ body{
 a {
     font-size: 0.8rem;
     text-decoration: none;
-    color:#1a7993;
+    color:var(--second-color);
     transition: 0.2s ease-in-out;
 }
 a:hover{
-    color: #28abcf;
+    color: var(--active-color);
 }
 
 .main-login{
@@ -48,7 +51,7 @@ a:hover{
 .left-login h1{
     font-size: 36px;
     align-items: center;
-    color: #e1e1e6;
+    color: var(--basic-color);
 }
 
 .left-login img{
@@ -75,17 +78,17 @@ a:hover{
 }
 
 .card-login h1{
-    color: #e1e1e6;
+    color: var(--basic-color);
     font-size: 25px;
     margin-bottom: 39px;
 }
 
 .card-login span i{
-    color: #1a7993;
+    color: var(--second-color);
 }
 
 .card-login span {
-    color: #e1e1e6;
+    color: var(--basic-color);
     font-weight: normal;
     font-size: 0.8rem;
 }
@@ -93,7 +96,7 @@ a:hover{
 .textfield{
     margin: 10px auto;
     width: 100%;
-    border-bottom: 1px solid #e1e1e6;
+    border-bottom: 1px solid var(--basic-color);
     padding-top: 10px;
     padding-bottom: 1px;
 }
@@ -103,7 +106,7 @@ a:hover{
 
 .textfield input{
     width: 90%;
-    color: #e1e1e6;
+    color: var(--basic-color);
     outline: none;
     background: transparent;
     font-size: 0.8rem;
@@ -116,7 +119,7 @@ a:hover{
 
 #eyeHideOn{
     display: none;
-    color: #125466;
+    color: var(--second-color);
 }
 
 .btn-login{
@@ -129,13 +132,13 @@ a:hover{
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 800;
-    color: #e1e1e6;
-    background: #1a7993;
+    color: var(--basic-color);
+    background: var(--second-color);
     transition: all 0.2s ease-in-out;
 }
 .btn-login:hover{
     letter-spacing: 3px;
-    background: #28abcf;
+    background: var(--active-color);
 }
 
 .card-login span{
