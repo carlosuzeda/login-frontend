@@ -25,12 +25,12 @@ body{
 }
 
 .fadeIn {
-position: relative;
-animation: fadeIn 0.6s ease;
+    position: relative;
+    animation: fadeIn 0.6s ease;
 }
 @keyframes fadeIn {
-0% { left: 60px; opacity: 0;  }
-100% { left: 0px; opacity: 1; }
+    0% { left: 60px; opacity: 0;  }
+    100% { left: 0px; opacity: 1; }
 }
 
 a {
@@ -49,12 +49,13 @@ a:hover{
 }
 
 .left-signup{
-    width: 35vw;
-    height: 100vh;
+    width: 100%;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 34px;
 }
 
 .card-signup h1{
@@ -64,11 +65,10 @@ a:hover{
 }
 
 .card-signup{
-    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 64px 64px 64px 64px;
+    padding: 64px;
     border-radius: 8px;
     background: hsla(var(--hue), 0%, 10%, 1);
 }
@@ -150,12 +150,13 @@ a:hover{
 }
 
 .right-signup{
-    width: 35vw;
-    height: 100vh;
+    width: 100%;
+    max-width: 480px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 34px;
 }
 
 .box-right{
@@ -164,7 +165,7 @@ a:hover{
 }
 
 .box-right h1{
-    font-size: 36px
+    font-size: 32px
 }
 
 .zone-text{
@@ -172,23 +173,17 @@ a:hover{
 }
 
 
-@media only screen and (max-width: 880px){
+@media only screen and (max-width: 880px) {
     .main-signup{
-        margin: auto;
         flex-direction:column-reverse;
     }
-    .card-signup{
-        padding: 32px 32px 10px 32px;
-        width: 80%;
-        margin: 32px;
-    }
+
     .left-signup{
-        align-items: center;
         width: 100%;
         height: auto;
     }
+    
     .right-signup{
-        align-items: center;
         width: 100%;
         height: auto;
     }    
@@ -209,27 +204,6 @@ a:hover{
     }
     .card-signup span{
         font-size: 0.7rem;
-    }
-    .card-signup h1{
-        font-size: 20px;
-    }
-}
-
-@media only screen and (orientation: landscape) and (max-height: 500px){
-    .card-signup{
-         padding: 0px 8px 0px 8px;
-    }
-      .box-right h1{
-        font-size: 25px;
-    }
-    .box-right{
-        font-size: 0.8rem;
-    }
-    .text-field input{
-        font-size: 0.6rem;
-    }
-    .card-signup span{
-        font-size: 0.6rem;
     }
     .card-signup h1{
         font-size: 20px;
