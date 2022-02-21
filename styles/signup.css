@@ -17,6 +17,8 @@
 
 body{
     background: linear-gradient(10deg, hsla(var(--hue), 0%, 5%, 1), hsla(var(--hue), 0%, 0%, 1));
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +194,7 @@ a:hover{
     }    
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
     .right-signup img{
         display: none;
     }
@@ -207,6 +209,27 @@ a:hover{
     }
     .card-signup span{
         font-size: 0.7rem;
+    }
+    .card-signup h1{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 500px){
+    .card-signup{
+         padding: 0px 8px 0px 8px;
+    }
+      .box-right h1{
+        font-size: 25px;
+    }
+    .box-right{
+        font-size: 0.8rem;
+    }
+    .text-field input{
+        font-size: 0.6rem;
+    }
+    .card-signup span{
+        font-size: 0.6rem;
     }
     .card-signup h1{
         font-size: 20px;
